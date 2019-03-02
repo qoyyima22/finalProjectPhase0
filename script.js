@@ -47,14 +47,17 @@ function convertCur (nilai1,inputCur,outputCur){
         return
     }
     if (subOutput.toString().length>3&&subOutput>1){
-        let temp=''
+        var temp=''
         for (var i=0;i<subOutput.toString().length;i++){
-            if((Math.floor(subOutput).toString().length-(i))%3===0&&i!==0&&subOutput.toString()[i]!=="."&&i<=Math.floor(subOutput).toString().length){
+            if(subOutput.toString()[i-3]==="."){
+                break;
+            }
+            if(subOutput.toString()[i]==="."){
+                temp=temp+","
+            }
+            else if((Math.floor(subOutput).toString().length-(i))%3===0&&i!==0&&subOutput.toString()[i]!=="."&&i<=Math.floor(subOutput).toString().length){
                 temp=temp+"."
                 temp=temp+subOutput.toString()[i]
-            }
-            else if(subOutput.toString()[i]==="."){
-                temp=temp+","
             }
             else{temp=temp+subOutput.toString()[i]}
         }
