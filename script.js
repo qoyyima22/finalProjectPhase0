@@ -46,7 +46,10 @@ function convertCur (nilai1,inputCur,outputCur){
         output.innerHTML="Please check your input!!"
         return
     }
-    if (subOutput.toString().length>3&&subOutput>1){
+    if(subOutput<1){
+        subOutput=subOutput.toString().slice(0,5)
+    }
+    else if (subOutput.toString().length>3&&subOutput>1){
         var temp=''
         for (var i=0;i<subOutput.toString().length;i++){
             if(subOutput.toString()[i-3]==="."){
