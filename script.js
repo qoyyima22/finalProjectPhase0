@@ -16,7 +16,7 @@ function convertCur (nilai1,inputCur,outputCur){
         "Australian Dollar":{value:1.411,symbol:"$"},
         "Canada Dollar":{value:1.329,symbol:"$"},
         "Switzerland Franc":{value:0.998,symbol:"&#67"},
-        "Chinese Renmibi":{value:6.706,symbol:"&#165"},
+        "Chinese Renminbi":{value:6.706,symbol:"&#165"},
         "Swedian Krona":{value:9.27,symbol:"&#107"}
     }
     var output=document.getElementById("output")
